@@ -1,0 +1,14 @@
+<html>
+	<body>
+		Library Manager - Books
+		<br>
+		<br>
+		{% for book in all_books %}
+			{{ book.title }}
+			<br>
+			<br>
+			{{ book.author_name}}
+			<hr>
+		{% endfor %}
+	</body>
+</html>

@@ -27,5 +27,16 @@ class BookStatus(models.Model):
         ("Unavailable", "unavailable")
     )
     status = models.CharField(max_length=100, choices=STATUSES)
-    member = models.ForeignKey("Member", on_delete=models.CASCADE, related_name="user_status")
-    book = models.ForeignKey("Book", on_delete=models.CASCADE, related_name="book_status")
+    member = models.ForeignKey(
+        "Member",
+        on_delete=models.CASCADE,
+        related_name="user_status",
+        blank=True,
+        null=True
+    )
+    book = models.ForeignKey(
+        "Book",
+        on_delete=models.CASCADE,
+        related_name="book_status"
+    )
+    created_on = models.DateTimeField(auto_now_add=True)

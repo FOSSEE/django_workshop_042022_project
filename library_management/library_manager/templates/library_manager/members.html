@@ -1,0 +1,17 @@
+<html>
+	<body>
+		Library Manager - Members
+		<br>
+		<br>
+		{% for member in all_members %}
+			{{ member.name }}
+			<br>
+			<br>
+			{{ member.phone }}
+			<br>
+			<br>
+			{{ member.email }}
+			<hr>
+		{% endfor %}
+	</body>
+</html>

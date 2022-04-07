@@ -1,0 +1,24 @@
+<html>
+	<body>
+		Library Manager - Members
+		<br>
+		<br>
+		<table border="3">
+			<thead>
+				<td> Book </td>
+				<td> Member Name </td>
+				<td> Status </td>
+				<td> Date </td>
+			</thead>
+			<tbody>
+				{% for stat in all_statuses %}
+				<tr>
+					<td> {{ stat.book }} </td> 
+					<td> {{ stat.member }} </td>
+					<td> {{ stat.status }} </td>
+					<td> {{ stat.created_on }} </td>
+				</tr>
+				{% endfor %}
+			</tbody>
+	</body>
+</html>
